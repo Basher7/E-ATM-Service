@@ -1,0 +1,42 @@
+﻿@model EatmWebApp.Models.EatmAccount
+@{
+    ViewBag.Title = "Balance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="btn btn-danger">@ViewBag.Balanceshow</h3>
+
+
+
+@*@using (Html.BeginForm())
+{
+    <div class="row">
+        <div>
+            <div class="Form-body">
+                <div class="form-group">
+                    @Html.Label("exampleInputCardNumber1", "Enter your Card Number")
+                    @Html.TextBoxFor(model => model.CardNumber, new { @placeholder = "Enter Your Card Number", @class = "form-control", @id = "exampleInputCardNumber1" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Enter your Name")
+                    @Html.TextBoxFor(model => model.Name, new { @placeholder = "Enter Your Name", @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("exampleInputPassword1", "Password")
+                    @Html.TextBoxFor(model => model.Password, new { @placeholder = "Enter Your Password", @class = "form-control", @id = "exampleInputPassword1" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Enter diposit amount")
+                    @Html.TextBoxFor(model => model.Balance, new { @placeholder = "Enter Diposit Amount", @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-success">Add Balance</button>
+            </div>
+            @Html.ActionLink("Go Back", "Transaction", "EatmAccounts")
+        </div>
+    </div>
+}*@
+
+<br/>
+<br />
+<br />
+@Html.ActionLink("Go Back", "Transaction", "EatmAccounts")

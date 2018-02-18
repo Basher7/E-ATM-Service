@@ -1,0 +1,20 @@
+﻿@model EatmWebApp.Models.EatmAccount
+
+@{
+    ViewBag.Title = "DipositBalance";
+}
+
+@using (Html.BeginForm("DipositBalance", "EatmAccounts", FormMethod.Post)) 
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.Label("Enter Diposit amount")
+            @Html.TextBoxFor(model => model.Balance, new { @placeholder = "Enter Diposit Amount", @class = "form-control", id = "addBalance" })
+            @Html.ValidationMessageFor(model => model.Balance)
+
+        </div>
+        <button type="submit" class="btn btn-success">Add Balance</button>
+    </div>
+}

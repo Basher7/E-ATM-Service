@@ -1,0 +1,38 @@
+﻿@model EatmWebApp.Models.EatmAccount
+
+@{
+    ViewBag.Title = "CustomerLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .form-group{
+        display: inline-block;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col col-lg-6  col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12">
+            <div class="Form-body">
+                <h2>Log-In</h2>
+                <div class="form-group">
+                    @Html.Label("exampleInputCardNumber1", "Card-Number")
+                    @Html.TextBoxFor(model => model.CardNumber, new { @placeholder = "Enter Your Card Number", @class = "form-control", @id = "exampleInputPassword1" })
+                </div>
+                <div class="form-group">
+
+                    @Html.Label("exampleInputPassword1", "Password")
+
+                    @Html.TextBoxFor(model => model.Password, new { @placeholder = "Enter Your Password", @class = "form-control", @id = "exampleInputPassword1" })
+                </div>
+
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-3">
+        </div>
+    </div>
+}
+

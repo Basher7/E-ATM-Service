@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .jumbotron{
+        background-color: #b200ff;
+    }
+    .jumbotron h1{
+        color: #ffffff;
+    }
+    .lead {
+        color: #7fff00;
+    }
+</style>
+<div class="jumbotron">
+    <h1>Welcome to E-ATM</h1>
+    <p class="lead">In My E-ATM Apllication You Can Perform Your Online Transaction</p>
+    
+    @Html.ActionLink("Log-In", "CustomerLogin", "EatmAccounts", null, new { @class = "btn btn-primary btn-large" })
+    
+</div>
+

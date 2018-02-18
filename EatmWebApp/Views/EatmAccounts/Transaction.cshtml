@@ -1,0 +1,18 @@
+﻿@model EatmWebApp.Models.EatmAccount
+@{
+    ViewBag.Title = "Transaction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Mymessage</h2>
+<h2>@ViewBag.Message</h2>
+<div class="row">
+    <div class="col col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-12">
+        @Html.ActionLink("Deposit", "DipositBalance", "EatmAccounts", new { id = (int)Session["id"] }, new { @class = "btn btn-info btn-lg btn-block" })
+        @Html.ActionLink("Balance", "Balance", "EatmAccounts", new { id = (int)Session["id"] }, new { @class = "btn btn-info btn-lg btn-block" })
+        @Html.ActionLink("Withdraw", "Withdraw", "EatmAccounts", new { id = (int)Session["id"] }, new { @class = "btn btn-info btn-lg btn-block" })
+        @Html.ActionLink("Exit", "Exit", "EatmAccounts", new { id = (int)Session["id"] }, new { @class = "btn btn-info btn-lg btn-block" })
+    </div>
+    <div class="col col-lg-4 col-md-4"></div>
+    @*<div class="col col-lg-3 col-md-3"></div>*@
+</div>

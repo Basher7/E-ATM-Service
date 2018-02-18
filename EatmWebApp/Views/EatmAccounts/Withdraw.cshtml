@@ -1,0 +1,27 @@
+﻿@model EatmWebApp.Models.EatmAccount
+@{
+    ViewBag.Title = "Withdraw";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Withdraw Input</h2>
+<h3 class="well col col-md-4 col-sm-12">@ViewBag.Message</h3>
+<div class="clearfix"></div>
+@using (Html.BeginForm())
+{
+  
+    <div class="Form-body">
+        <div class="form-group">
+            
+            @Html.Label("exampleInputCardNumber1", "Amount")
+            @*@Html.TextBoxFor( model => model.Balance,new { @placeholder = "Enter Your Amount", @class = "form-control", @id = "exampleInputPassword1" })*@
+            @Html.TextBox("withdraw", " ", new { @class = "form-control" })
+            
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+    <div>
+        @Html.ActionLink("Go Back", "Transaction", "EatmAccounts")
+    </div>
+}
